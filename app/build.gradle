@@ -1,0 +1,38 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "com.example.pc0.cehua.journalism"
+        minSdkVersion 12
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs'] // <-- Set your folder here!
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.2.1'
+    compile 'com.android.support:design:23.2.1'
+    compile 'de.hdodenhof:circleimageview:2.0.0'//圆形图片
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile files('libs/Volley.jar')
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile files('libs/MobCommons-2016.0301.1053.jar')
+    compile files('libs/jpush-android-2.1.0.jar')
+}

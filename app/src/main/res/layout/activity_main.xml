@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.MainActivity">
+
+    <include layout="@layout/activity_title" />
+
+    <FrameLayout
+        android:id="@+id/main_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="8" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#00ffcc" />
+
+    <LinearLayout
+        android:id="@+id/main_xia"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_weight="1"
+
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/mainRelative_zuo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/main_zuo"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/abc_btn_no" />
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="40dp"
+                android:gravity="center_horizontal"
+                android:text="新闻首页" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:background="#00ffcc" />
+
+        <RelativeLayout
+            android:id="@+id/mainRelative_zhong"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/main_zhong"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/abc_btn_no" />
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="10dp"
+                android:layout_marginTop="40dp"
+                android:gravity="center_horizontal"
+                android:text="我的收藏" />
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:background="#00ffcc" />
+
+    </LinearLayout>
+
+</LinearLayout>
